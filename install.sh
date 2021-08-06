@@ -1,4 +1,4 @@
-!#bin/bash
+#!bin/bash
 
 cat > /etc/yum.repos.d/r1soft.repo << EOF
 [r1soft]
