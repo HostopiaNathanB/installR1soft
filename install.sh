@@ -14,6 +14,7 @@ cat /etc/yum.repos.d/r1soft.repo
 
 yum install serverbackup-enterprise-agent -y
 
+yum install -y kernel-headers-$(uname -r)
 yum install -y kernel-devel-$(uname -r)
 
 r1soft-setup --get-module
