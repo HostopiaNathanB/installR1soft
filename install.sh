@@ -18,6 +18,7 @@ yum install -y kernel-headers-$(uname -r)
 
 if [[ $? != "0" ]]
   then
+     if [[ $(rpm -qa kernel-headers) == $(echo kernel-headers-$(uname -r)) ]]; then echo "kernel-headers is already installed"; fi
   echo "Couldn't install Kernel-headers-$(uname -r) Please continue manually"
   exit
 fi
@@ -25,6 +26,7 @@ fi
 yum install -y kernel-devel-$(uname -r)
 if [[ $? != "0" ]]
   then
+     if [[ $(rpm -qa kernel-devel) == $(echo kernel-devel-$(uname -r)) ]]; then echo "kernel-devel is already installed"; fi
   echo "Couldn't install Kernel-devel-$(uname -r) Please continue manually"
   exit
 fi
