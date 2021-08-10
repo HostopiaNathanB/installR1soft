@@ -3,7 +3,7 @@
 cat > /etc/yum.repos.d/r1soft.repo << EOF
 [r1soft]
 name=R1Soft Repository Server
-baseurl=http://repo.r1soft.com/yum/stable/$basearch/
+baseurl=http://repo.r1soft.com/yum/stable/\$basearch/
 enabled=1
 gpgcheck=0
 EOF
