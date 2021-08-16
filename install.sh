@@ -1,4 +1,10 @@
 #!bin/bash
+r1soft-setup
+if [[ $? == 1 ]]
+  then
+  echo "##### R1Soft is already installed #####"
+  exit
+fi
 
 cat > /etc/yum.repos.d/r1soft.repo << EOF
 [r1soft]
